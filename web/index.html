@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Detector</title>
+    <link rel="stylesheet" href="./dist/app.css" />
+  </head>
+  <body class="hidden bg-transparent antialiased">
+    <div id="app" class="clx-app">
+      <main class="clx-shell">
+        <header class="clx-header">
+          <div class="clx-heading">
+            <p class="clx-kicker">Admin tool</p>
+            <h1 class="clx-title">Inventory images</h1>
+          </div>
+          <div class="clx-header-actions">
+            <button id="scanButton" class="clx-primary-button" type="button">Scan</button>
+            <button id="closeButton" class="clx-secondary-button" type="button">Close</button>
+          </div>
+        </header>
+
+        <section id="statGrid" class="hidden clx-stat-grid">
+          <div class="clx-stat clx-stat-danger">
+            <p>Missing</p>
+            <strong id="missingValue">0</strong>
+          </div>
+          <div class="clx-stat clx-stat-warning">
+            <p>Unused</p>
+            <strong id="unusedValue">0</strong>
+          </div>
+        </section>
+
+        <section id="statusBar" class="hidden clx-status-bar"></section>
+
+        <section id="progressPanel" class="hidden clx-progress-panel">
+          <div class="clx-progress-meta">
+            <span id="progressLabel">Scan progress</span>
+            <span id="etaValue">Estimated remaining: calculating</span>
+          </div>
+          <div class="clx-progress-track">
+            <div id="progressBar" class="clx-progress-fill"></div>
+          </div>
+        </section>
+
+        <section class="clx-results">
+          <div id="scanState" class="hidden image-scan-state"></div>
+
+          <div id="imageWorkspace" class="image-workspace">
+            <article class="image-panel">
+              <div class="image-panel-header">
+                <h2>Missing images</h2>
+                <input
+                  id="missingSearch"
+                  class="clx-input"
+                  type="search"
+                  placeholder="Search item, label or image. Supports *"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </div>
+              <div id="missingList" class="image-list"></div>
+            </article>
+
+            <article class="image-panel">
+              <div class="image-panel-header">
+                <h2>Unused images</h2>
+                <input
+                  id="unusedSearch"
+                  class="clx-input"
+                  type="search"
+                  placeholder="Search image name or file. Supports *"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </div>
+              <div id="unusedList" class="image-list"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
