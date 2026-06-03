@@ -20,6 +20,10 @@ GitHub repository:
 
 https://github.com/Cylix-Development/clx_imagedetector
 
+Script preview:
+
+https://medal.tv/games/gta-v/clips/mQmvLqzcnKLC-Rk8z?invite=cr-MSxiRFUsNTA3MzAxNTYz
+
 ## Features
 
 - Admin-only NUI panel for image scanning.
